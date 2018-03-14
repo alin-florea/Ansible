@@ -1,0 +1,32 @@
+- name: Install apache2 web server
+  become: true
+  become_method: sudo
+  apt: pkg={{ item }} state=installed update_cache=true
+  with_items:
+  - apache2
+  - libapache2-mod-fastcgi
+
+- name: Enable apache2 modules
+  become: true
+  become_method: sudo
+  command: a2enmod rewrite actions alias fastcgi proxy_fcgi
+
+- name: Upload apache2 default configuration
+  become: true
+  become_method: sudo
+  copy: src=/home/alin/Ansible/ansible-lamp-stack-playbook/roles/apache2/files/000-default.conf dest=/etc/apache2/sites-enabled/
+
+- name: Upload index.php for host
+  become: true
+  become_method: sudo
+  copy: src=/home/alin/Ansible/ansible-lamp-stack-playbook/roles/apache2/files/index.php dest=/var/www/html/ mode=0644  
+
+- name: Upload db.php for host
+  become: true
+  become_method: sudo
+  copy: src=/home/alin/Ansible/ansible-lamp-stack-playbook/roles/mysql/files/db.php dest=/var/www/html/ mode=0644
+
+- name: Restart webserver
+  become: true
+  become_method: sudo
+  service: name=apache2 state=restarted

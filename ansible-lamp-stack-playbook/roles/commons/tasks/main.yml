@@ -1,0 +1,35 @@
+- name: Essentials | Ensure that the repositories are update
+  become: true
+  apt:
+    update_cache: yes
+
+- name: Essentials | Upgrade the Server
+  become: true
+  apt:
+    upgrade: safe
+
+- name: Install python3 for Ansible
+  become: true
+  raw: bash -c "test -e /usr/bin/python || (apt -qqy update && apt install -qqy python-minimal)"
+  register: output
+  changed_when: output.stdout != ""
+
+- name: Essentials | Install all the essential packages
+  become: true
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: installed
+  with_items:
+    - build-essential
+    - git
+    - vim
+    - net-tools
+    - openssh-server
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+    - docker
+    - docker.io
+    - docker-compose

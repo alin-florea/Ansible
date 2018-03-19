@@ -36,7 +36,7 @@ ansible-container init (optional)
 ###Ansible Commands
 sudo ansible all -m ping --ask-pass -vvv
 sudo ansible all -m ping   -vvv
-sudo ansible-playbook -i hosts lamp-playbook.yml
+sudo ansible-playbook -i hosts lamp-playbook.yml --ask-pass
 
 Ex.2:
 docker-compose up --build -d

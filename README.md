@@ -9,6 +9,7 @@ Configure LAMP stack with Ansible
 - Playbook is run with a user "sudo", not root
 
 ###Ubuntu Instance-Prerequisites
+
             -sudo usermod -a -G sudo "user"    #add user to the group sudo
             -sudo visudo
             -"user" ALL=(ALL) NOPASSWD: ALL  #remove password for sudo commands
@@ -48,8 +49,6 @@ Configure LAMP stack with Ansible
             -sudo ansible all -m ping   -vvv
             -sudo ansible-playbook -i hosts lamp-playbook.yml --ask-pass
 
-Ex.2:
-            -docker-compose up --build -d
 
 ###Configurari ansible.cfg
             -inventory      = /home/alin/Ansible/ansible-lamp-stack-playbook/hosts

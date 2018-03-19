@@ -1,3 +1,15 @@
+Configure LAMP stack with Ansible
+- Ansible installation
+- Create Ansible Role for:
+            - common configurations
+            - PHP 7
+            - MYSQL 5.7
+            - APACHE 2.4
+- Playbook creation using the role / roles above deploys a PHP application that uses a database
+- Playbook is run with a user "sudo", not root
+
+
+
 ###Ubuntu Instance. Prerequisites:
 sudo usermod -a -G sudo "user"    #add user to the group sudo
 sudo visudo

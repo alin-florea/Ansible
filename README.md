@@ -45,12 +45,14 @@ Configure LAMP stack with Ansible
             -ansible-container init (optional)
 
 ###Ansible Commands
+
             -sudo ansible all -m ping --ask-pass -vvv
             -sudo ansible all -m ping   -vvv
             -sudo ansible-playbook -i hosts lamp-playbook.yml --ask-pass
 
 
 ###Configurari ansible.cfg
+
             -inventory      = /home/alin/Ansible/ansible-lamp-stack-playbook/hosts
             -library        = /usr/share/my_modules/
             -module_utils   = /usr/share/my_module_utils/

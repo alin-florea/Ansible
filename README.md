@@ -8,7 +8,7 @@ Configure LAMP stack with Ansible
 - Playbook creation using the role / roles above deploys a PHP application that uses a database
 - Playbook is run with a user "sudo", not root
 
-###Ubuntu Instance. Prerequisites:
+###Ubuntu Instance-Prerequisites:
             -sudo usermod -a -G sudo "user"    #add user to the group sudo
             -sudo visudo
             -"user" ALL=(ALL) NOPASSWD: ALL  #remove password for sudo commands

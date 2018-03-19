@@ -51,7 +51,7 @@ Configure LAMP stack with Ansible
             -sudo ansible-playbook -i hosts lamp-playbook.yml --ask-pass
 
 
-###Configurari ansible.cfg
+###Configure ansible.cfg
 
             -inventory      = /home/alin/Ansible/ansible-lamp-stack-playbook/hosts
             -library        = /usr/share/my_modules/

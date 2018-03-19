@@ -1,7 +1,7 @@
 ###Ubuntu Instance. Prerequisites:
 sudo usermod -a -G sudo "user"    #add user to the group sudo
 sudo visudo
-username ALL=(ALL) NOPASSWD: ALL  #remove password for sudo commands
+"user" ALL=(ALL) NOPASSWD: ALL  #remove password for sudo commands
 
 
 apt-get update -y

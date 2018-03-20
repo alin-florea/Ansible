@@ -45,16 +45,16 @@ Configure LAMP stack with Ansible
             -apt install python-pip
             -pip install --upgrade pip
             -pip install --upgrade setuptools
-            -sudo pip install --ignore-installed --upgrade ansible
-            -sudo pip install pyOpenSSL==16.2.0
+            -pip install --ignore-installed --upgrade ansible
+            -pip install pyOpenSSL==16.2.0
             -apt-get install sshpass
             -ansible-container init (optional)
 
 ###Ansible Commands
 
-            -sudo ansible all -m ping --ask-pass -vvv
-            -sudo ansible all -m ping   -vvv
-            -sudo ansible-playbook -i hosts lamp-playbook.yml --ask-pass
+            -ansible all -m ping --ask-pass -vvv
+            -ansible all -m ping   -vvv
+            -ansible-playbook -i hosts lamp-playbook.yml --ask-pass
 
 
 ###Configure ansible.cfg

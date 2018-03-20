@@ -9,6 +9,10 @@ Configure LAMP stack with Ansible
 - Playbook is run with a user "sudo", not root
 
 ###Ubuntu Instance-Prerequisites
+            -Install Ubuntu 16.04 on a virtual machine
+            -User: alin  ; Sudo_Password: admin
+            -Internal IP: 192.168.196.50
+            -Setup Path for inventory and hosts: /home/alin/Ansible/ansible-lamp-stack-playbook/ (changes can be done on /etc/ansible/ansible.cf)
 
             -sudo usermod -a -G sudo "user"    #add user to the group sudo
             -sudo visudo

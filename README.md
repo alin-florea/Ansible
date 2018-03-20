@@ -9,6 +9,7 @@ Configure LAMP stack with Ansible
 - Playbook is run with a user "sudo", not root
 
 ###Ubuntu Instance-Prerequisites
+            
             -Install Ubuntu 16.04 on a virtual machine
             -User: alin  ; Sudo_Password: admin
             -Internal IP: 192.168.196.50

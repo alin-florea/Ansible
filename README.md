@@ -18,6 +18,16 @@ Configure LAMP stack with Ansible
             -sudo usermod -a -G sudo "user"    #add user to the group sudo
             -sudo visudo
             -"user" ALL=(ALL) NOPASSWD: ALL  #remove password for sudo commands
+            
+            -sudo adduser <username>
+            -sudo useradd username -m -s /bin/bash 
+            -sudo passwd username 
+
+            -sudo addgroup <groupname>
+            -sudo usermod -aG <groupname> <username>
+
+            -sudo visudo
+            -<username> ALL=(ALL) ALL
 
 
             -apt-get update -y

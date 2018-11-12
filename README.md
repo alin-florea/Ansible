@@ -56,9 +56,9 @@ Configure LAMP stack with Ansible
             -pip install --upgrade pip
             -pip install --upgrade setuptools
             -pip install --ignore-installed --upgrade ansible
-            -pip install pyOpenSSL==16.2.0
-            -apt-get install sshpass
-            -ansible-container init (optional)
+            ###-pip install pyOpenSSL==16.2.0
+            ###-apt-get install sshpass
+            ###-ansible-container init (optional)
 
 ###Ansible Commands
 
